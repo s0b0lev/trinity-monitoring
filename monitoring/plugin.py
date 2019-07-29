@@ -15,7 +15,7 @@ from trinity.protocol.eth.events import NewBlockHashesEvent
 from trinity._utils.os import friendly_filename_or_url
 
 
-async def monitoring(normalized_name, trinity_config) -> None:
+async def monitoring(normalized_name: str, trinity_config: TrinityConfig) -> None:
     event_bus = TrinityEventBusEndpoint("monitoring_ui")
     connection_config = ConnectionConfig.from_name(
         normalized_name,
